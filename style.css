@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(218, 28%, 13%);
+    color: white;
+    text-align: center;
+}
+
+button {
+    border: none;
+    background: hsl(176, 68%, 64%);
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    padding: 10px 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links a {
+    padding: 0 10px;
+}
+
+.hero-content {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+.feature-item-content {
+    width: 80%;
+}
+
+.hero-sec-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-sec-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 80%;
+    text-align: left;
+}
+
+.voc-container {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.voc-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background: hsl(219, 30%, 18%);
+    margin: 0 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.voc-container::before {
+    content: open-quote;
+    color: hsl(176, 68%, 64%);
+    font-size: 5em;
+    position: absolute;
+    z-index: 1;
+}
+
+.voc-author {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.voc-author-img img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: hsl(217, 28%, 15%);
+    margin: 50px;
+}
+
+.signup-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background: hsl(219, 30%, 18%);
+    width: 50%;
+    padding: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.contact, .about-us {
+    display: flex;
+    flex-direction: column;
+}
+
+.address {
+    width: 300px;
+}
+
+
+
+
+
