@@ -5,29 +5,79 @@
 }
 
 body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400, 700;
     background-color: hsl(218, 28%, 13%);
     color: white;
     text-align: center;
 }
 
+h2 {
+    line-height: 2em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sns i {
+    margin-left: 5px;
+    font-size: 2.5em;
+}
+
+i:hover {
+    color: hsl(176, 68%, 64%);
+    cursor: pointer;
+}
+
 button {
     border: none;
-    background: hsl(176, 68%, 64%);
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%) 0%, hsl(182, 68%, 64%) 51%, hsl(198, 60%, 50%) 100%);
     text-decoration: none;
     cursor: pointer;
     text-align: center;
     border-radius: 50px;
     color: white;
     padding: 10px 30px;
+    margin: 30px 0;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-image: linear-gradient(to left, hsl(176, 68%, 64%) 0%, hsl(182, 68%, 64%) 51%, hsl(198, 60%, 50%) 100%);
+}
+
+input {
+    border-radius: 50px;
+    border: none;
+    padding: 10px 30px;
+    outline: none;
 }
 
 a {
     text-decoration: none;
     color: white;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    background-color: hsl(176, 68%, 64%);
+    width: 100%;
+    height: 2px;
+    bottom: -1px;
+    left: -1px;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+}
+
+a:hover::after {
+    transform: scale(1, 1);
 }
 
 .nav {
-    padding: 20px;
+    padding: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -41,13 +91,22 @@ a {
     padding: 0 10px;
 }
 
-.hero-content {
-    width: 600px;
+.hero {
+    width: 65%;
     margin: 0 auto;
+}
+
+.hero-2 {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.hero-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 60px;
 }
 
 .feature-container {
@@ -60,6 +119,7 @@ a {
     display: flex;
     width: 50%;
     justify-content: center;
+    margin-bottom: 80px;
 }
 
 .feature-item-content {
@@ -69,6 +129,7 @@ a {
 .hero-sec-container {
     display: flex;
     justify-content: center;
+    padding: 70px 0px;
 }
 
 .hero-sec-content {
@@ -90,7 +151,7 @@ a {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     background: hsl(219, 30%, 18%);
     margin: 0 20px;
-    padding: 10px;
+    padding: 50px 30px;
     text-align: left;
 }
 
@@ -100,17 +161,25 @@ a {
     font-size: 5em;
     position: absolute;
     z-index: 1;
+    left: -5px;
+    top: -5px;
 }
 
 .voc-author {
     display: flex;
     justify-content: flex-start;
+    margin-top: 15px;
+}
+
+.voc-author-info {
+    margin: 10px;
 }
 
 .voc-author-img img {
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    margin: 0 7px 7px 7px;
 }
 
 .signup-container {
@@ -119,7 +188,7 @@ a {
     align-items: center;
     flex-direction: column;
     background: hsl(217, 28%, 15%);
-    margin: 50px;
+    margin: 100px 50px;
 }
 
 .signup-card {
@@ -144,7 +213,25 @@ a {
     width: 300px;
 }
 
+@media only screen and (max-width: 700px) {
+    .feature-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-sec-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .voc-container {
+        flex-direction: column;
+        align-items: center;
+    } 
 
-
-
-
+    .voc-card {
+        margin-bottom: 20px;
+    }
+}
+    
